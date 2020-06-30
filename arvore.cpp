@@ -21,7 +21,6 @@ int main() {
 	setlocale(LC_ALL, "Portuguese");
 	Node *arvore = NULL;
 	Node *max, *min;
-	int alturaArvore;
 	int op=1;
 	do {
 		system("cls");
@@ -53,7 +52,7 @@ int main() {
 				system("pause");
 				break;
 			case 4:
-				alturaArvore = altura(arvore);
+				int alturaArvore = altura(arvore);
 				printf("\nAltura da árvore binária: %d\n", alturaArvore);
 				system("pause");
 				break;
@@ -139,7 +138,7 @@ int altura(Node *raiz) {
 		return 0;
 	} 
 	else {
-		int alturaEsquerda=1, alturaDireita=1;
+		int alturaEsquerda, alturaDireita;
 		alturaEsquerda = altura(raiz->esquerda);
 		alturaDireita = altura(raiz->direita);
 		
